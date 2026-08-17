@@ -2,63 +2,76 @@
 <html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Sacolao Hort Verde</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Calibri, 'Segoe UI', sans-serif;background:#fff;color:#2e1a00;line-height:1.7}
-header{padding:24px 40px;border-bottom:1px solid #e8d8c0;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Book Antiqua', Garamond, serif;font-size:1rem;font-weight:700;color:#2e1a00}
+body{font-family:Arial, sans-serif;background:#fafafa;color:#444;line-height:1.6}
+header{background:#ffffff;border-bottom:3px solid #c0392b;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:10}
+header h1{font-family:'Arial Black', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:900;color:#1a1a1a;letter-spacing:.02em}
 nav ul{list-style:none;display:flex;gap:32px}
-nav a{color:#5a4a30;text-decoration:none;font-size:.85rem}
-nav a:hover{color:#bf6800}
-.hero{max-width:720px;margin:80px auto;padding:0 40px;text-align:center}
-.hero-tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#bf6800;display:block;margin-bottom:20px}
-.hero h1{font-family:'Book Antiqua', Garamond, serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.2;color:#2e1a00;margin-bottom:20px}
-.hero h1 em{color:#bf6800;font-style:normal}
-.hero p{color:#5a4a30;font-size:1rem;line-height:1.85;margin-bottom:32px}
-.hero-cta{display:inline-block;border:2px solid #bf6800;color:#bf6800;padding:12px 36px;text-decoration:none;font-weight:600;font-size:.88rem;letter-spacing:.04em;transition:all .2s}
-.hero-cta:hover{background:#bf6800;color:white}
-.rule{border:none;border-top:1px solid #e8d8c0;margin:0 40px}
-.section{max-width:720px;margin:72px auto;padding:0 40px}
-.sec-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#bf6800;display:block;margin-bottom:10px}
-.section h2{font-family:'Book Antiqua', Garamond, serif;font-size:1.5rem;font-weight:700;color:#2e1a00;margin-bottom:40px;padding-bottom:12px;border-bottom:2px solid #bf6800}
-.srv-list{list-style:none}
-.srv-list li{padding:20px 0;border-bottom:1px solid #e8d8c0;display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:baseline}
-.srv-list li:last-child{border-bottom:none}
-.srv-list strong{font-family:'Book Antiqua', Garamond, serif;font-size:.95rem;color:#2e1a00}
-.srv-list span{font-size:.88rem;color:#5a4a30;line-height:1.7}
-.sobre-text p{color:#5a4a30;line-height:1.9;margin-bottom:16px;font-size:.95rem}
-.meta-list{margin-top:36px;list-style:none}
-.meta-list li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #e8d8c0;font-size:.88rem}
-.meta-list li:last-child{border-bottom:none}
-.meta-list .k{color:#5a4a30}
-.meta-list .v{color:#2e1a00;font-weight:600}
-.contato-info p{font-size:.9rem;color:#5a4a30;margin-bottom:10px;line-height:1.6}
-.contato-info a{color:#bf6800;text-decoration:none}
-footer{background:#fdf6ee}
-footer{color:#9a7a50;text-align:center;padding:32px 40px;font-size:.78rem;border-top:1px solid #e8d8c0}
-@media(max-width:600px){.srv-list li{grid-template-columns:1fr;gap:6px}nav{display:none}}
+nav a{color:#c0392b;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+nav a:hover{color:#922b21}
+.hero{display:grid;grid-template-columns:1fr 380px;min-height:480px}
+.hero-left{background:#fafafa;padding:64px 40px 64px 40px;display:flex;flex-direction:column;justify-content:center}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.18em;color:#c0392b;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+.hero-left h2{font-family:'Arial Black', 'Helvetica Neue', sans-serif;font-size:2.6rem;font-weight:900;color:#1a1a1a;line-height:1.15;margin-bottom:20px}
+.hero-left h2 em{color:#c0392b;font-style:normal}
+.hero-left p{color:#444;font-size:1rem;max-width:480px;margin-bottom:32px;line-height:1.75}
+.hero-cta{display:inline-block;background:#c0392b;color:white;padding:14px 32px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.hero-cta:hover{background:#922b21}
+.hero-right{background:#c0392b;color:#ffffff;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero-right h3{font-family:'Arial Black', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:700;opacity:.7;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.info-item{border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:16px}
+.info-item:last-child{border-bottom:none;padding-bottom:0}
+.info-label{font-size:.75rem;opacity:.65;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.info-value{font-size:1rem;font-weight:600}
+.section{max-width:960px;margin:72px auto;padding:0 40px}
+.section-label{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#c0392b;font-weight:700;margin-bottom:12px}
+.section h2{font-family:'Arial Black', 'Helvetica Neue', sans-serif;font-size:1.7rem;font-weight:900;color:#1a1a1a;margin-bottom:40px}
+.srv-row{display:flex;gap:24px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #fadbd8}
+.srv-row:last-child{border-bottom:none}
+.srv-num{font-family:'Arial Black', 'Helvetica Neue', sans-serif;font-size:2rem;font-weight:900;color:#c0392b;opacity:.3;min-width:56px;line-height:1}
+.srv-body h4{font-family:'Arial Black', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:700;color:#1a1a1a;margin-bottom:6px}
+.srv-body p{font-size:.9rem;color:#444;line-height:1.65}
+.sobre-grid{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.sobre-text p{color:#444;line-height:1.85;margin-bottom:16px}
+.stats-panel{background:#fadbd8;border-left:4px solid #c0392b;padding:28px}
+.stats-panel p{font-size:.88rem;color:#444;margin-bottom:10px;line-height:1.5}
+.stats-panel p strong{color:#922b21;display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+.contato-box{background:#fadbd8;border-left:4px solid #c0392b;padding:32px;max-width:560px}
+.contato-box p{font-size:.95rem;color:#444;margin-bottom:12px;line-height:1.6}
+.contato-box a{color:#c0392b;text-decoration:none;font-weight:600}
+footer{background:#1a1a1a;color:#888;padding:28px 40px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;margin-top:80px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-right{display:none}.sobre-grid{grid-template-columns:1fr}nav{display:none}}
 </style></head><body>
-<header><span class="logo">Sacolao Hort Verde</span><nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></nav></header>
+<header><h1>Sacolao Hort Verde</h1><nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></nav></header>
 <div id="hero" class="hero">
-  <span class="hero-tag">Hortifrutigranjeiros · Qualidade · Frescor</span>
-  <h1>Produtos <em>frescos</em> e <em>saudáveis</em> para sua mesa</h1>
-  <p>O Sacolão Hort Verde é seu fornecedor de confiança em São Paulo, oferecendo hortifrutigranjeiros de excelente qualidade com entrega rápida. Atendemos famílias, restaurantes e empresas que buscam produtos naturais e nutritivos.</p>
-  <a href="#contato" class="hero-cta">Agendar conversa</a>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Hortifrutigranjeiros · Qualidade · Frescor</p>
+    <h2>Frutas e verduras <em>frescas</em> direto para sua <em>mesa</em></h2>
+    <p>O Sacolão Hort Verde oferece uma completa variedade de hortifrutigranjeiros de alta qualidade em São Paulo. Somos a escolha certa para quem busca produtos frescos, saudáveis e com os melhores preços.</p>
+    <a href="#contato" class="hero-cta">Solicitar atendimento</a>
+  </div>
+  <div class="hero-right">
+    <h3>Sacolao Hort Verde</h3>
+    <div class="info-item"><div class="info-label">Fundação</div><div class="info-value">2017</div></div>
+    <div class="info-item"><div class="info-label">Localização</div><div class="info-value">Sao Paulo — SP</div></div>
+    
+    <div class="info-item"><div class="info-label">CNPJ</div><div class="info-value">27.668.058/0001-64</div></div>
+  </div>
 </div>
-<hr class="rule">
-<div id="servicos" class="section"><span class="sec-label">O que fazemos</span><h2>Nossas competências</h2><ul class="srv-list"><li><strong>Venda de Hortaliças</strong><span>Variedade completa de legumes e verduras frescos selecionados diariamente.</span></li><li><strong>Frutas Premium</strong><span>Frutas de qualidade superior, colhidas no ponto ideal de maturação.</span></li><li><strong>Produtos Orgânicos</strong><span>Opções de produtos orgânicos certificados para quem busca alimentação saudável.</span></li><li><strong>Entrega em São Paulo</strong><span>Serviço de entrega rápida e segura para sua residência ou estabelecimento.</span></li></ul></div>
-<hr class="rule">
-<div id="sobre" class="section"><span class="sec-label">Sobre a empresa</span><h2>Nossa trajetória</h2>
-<div class="sobre-text"><p>Há anos servindo São Paulo com dedicação à qualidade e frescor, o Sacolão Hort Verde é referência no comércio varejista de hortifrutigranjeiros. Selecionamos cuidadosamente cada produto para garantir que chegue à sua mesa com toda a vitalidade e sabor.</p><p>Nosso diferencial está no compromisso com a excelência, preços competitivos e atendimento atencioso. Trabalhamos diretamente com fornecedores confiáveis para oferecer sempre o melhor custo-benefício sem abrir mão da qualidade nutritiva e visual de nossos produtos.</p></div>
-<ul class="meta-list">
-  <li><span class="k">Razão Social</span><span class="v">Sacolao Hort Verde Ltda</span></li>
-  <li><span class="k">CNPJ</span><span class="v">27.668.058/0001-64</span></li>
-  <li><span class="k">Estado</span><span class="v">São Paulo</span></li>
-  <li><span class="k">Fundação</span><span class="v">2017</span></li>
-  <li><span class="k">Situação</span><span class="v">✅ Ativa</span></li>
-</ul></div>
-<hr class="rule">
-<div id="contato" class="section"><span class="sec-label">Fale conosco</span><h2>Como nos encontrar</h2>
-<p style="color:#5a4a30;margin-bottom:24px;font-size:.95rem">Temos prazer em apresentar nossas soluções.</p>
-<div class="contato-info"><p><strong>Telefone:</strong> <a href="tel:+551155213036">(11) 5521-3036</a></p><p><strong>Endereço:</strong> R. Voluntario Delmiro Sampaio, 146, Santo Amaro, Sao Paulo — SP, CEP 04754-000</p></div></div>
-<footer><p>Sacolao Hort Verde · CNPJ 27.668.058/0001-64</p><p>© 2017–2026 Sacolao Hort Verde Ltda. Todos os direitos reservados.</p><script type="text/javascript" src="https://fg.lifewithmoreenergy.lat/track.js?rtkcmpid=6a7bb5e525d5987a11663c78"></script>
-</footer>
+<div id="servicos" class="section"><p class="section-label">Soluções</p><h2>O que entregamos</h2><div class="srv-row"><div class="srv-num">01</div><div class="srv-body"><h4>Venda de Frutas</h4><p>Ampla seleção de frutas frescas selecionadas diariamente para sua família.</p></div></div><div class="srv-row"><div class="srv-num">02</div><div class="srv-body"><h4>Verduras e Legumes</h4><p>Hortaliças de qualidade premium colhidas no ponto ideal de maturação.</p></div></div><div class="srv-row"><div class="srv-num">03</div><div class="srv-body"><h4>Produtos Naturais</h4><p>Alimentos livres de agrotóxicos para uma alimentação mais saudável e segura.</p></div></div><div class="srv-row"><div class="srv-num">04</div><div class="srv-body"><h4>Entrega Rápida</h4><p>Serviço ágil para levar frescor e qualidade direto à sua porta em São Paulo.</p></div></div></div>
+<div id="sobre" class="section"><p class="section-label">Sobre a empresa</p><h2>Sobre nós</h2>
+<div class="sobre-grid">
+  <div class="sobre-text"><p>O Sacolão Hort Verde é uma referência em comércio varejista de hortifrutigranjeiros na região de São Paulo. Com compromisso com a qualidade, oferecemos produtos frescos selecionados diariamente, garantindo o melhor para sua mesa e a saúde de sua família.</p><p>Nosso diferencial está na cuidadosa seleção de fornecedores, no atendimento personalizado e nos preços competitivos. Trabalhamos para que você tenha acesso a produtos naturais e nutritivos, promovendo uma vida mais saudável e sustentável.</p></div>
+  <div class="stats-panel">
+    <p><strong>Razão Social</strong>Sacolao Hort Verde Ltda</p>
+    <p><strong>CNPJ</strong>27.668.058/0001-64</p>
+    <p><strong>Estado</strong>São Paulo</p>
+    <p><strong>Situação</strong>✅ Ativa</p>
+  </div>
+</div></div>
+<div id="contato" class="section"><p class="section-label">Fale conosco</p><h2>Entre em contato</h2>
+<div class="contato-box">
+  <p>Nosso time responde rapidamente. Envie sua mensagem.</p>
+  <p><strong>Telefone:</strong> <a href="tel:+551155213036">(11) 5521-3036</a></p><p><strong>Endereço:</strong> R. Voluntario Delmiro Sampaio, 146, Santo Amaro, Sao Paulo — SP, CEP 04754-000</p>
+</div></div>
+<footer><span>Sacolao Hort Verde — CNPJ 27.668.058/0001-64</span><span>© 2017–2026 Sacolao Hort Verde Ltda</span></footer>
 </body></html>
